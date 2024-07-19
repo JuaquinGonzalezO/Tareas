@@ -6,7 +6,7 @@ package org.joaquingonzalez.webapp.service;
 
 import jakarta.persistence.EntityManager;
 import java.util.List;
-import org.joaquingonzalez.webapp.servlet.Producto;
+import org.joaquingonzalez.webapp.model.Producto;
 import org.joaquingonzalez.webapp.util.JpaUtil;
 
 

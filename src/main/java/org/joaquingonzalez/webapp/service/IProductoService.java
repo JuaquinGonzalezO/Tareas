@@ -5,7 +5,7 @@
 package org.joaquingonzalez.webapp.service;
 
 import java.util.List;
-import org.joaquingonzalez.webapp.servlet.Producto;
+import org.joaquingonzalez.webapp.model.Producto;
 
 /**
  *
