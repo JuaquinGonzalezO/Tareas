@@ -7,23 +7,23 @@ package org.joaquingonzalez.webapp.service;
 import jakarta.persistence.EntityManager;
 import java.util.List;
 import org.joaquingonzalez.webapp.servlet.Producto;
+import org.joaquingonzalez.webapp.util.JpaUtil;
 
 
-
-public class ProductoService implements IProductoService {
-
-    private  EntityManager em;
+public class ProductoService implements IProductoService{
     
-    public ProductoService() {
+    private EntityManager em;
+    
+    public ProductoService(){
+     this.em = JpaUtil.getEntityManager();
     }
     
-    
-    
+
     @Override
     public List<Producto> listarProductos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-   
-    
+       return em.createQuery("SELECT P FROM Producto p", Producto.class).getResultList();
+       
+
     }
 
     @Override
@@ -37,7 +37,7 @@ public class ProductoService implements IProductoService {
     }
 
     @Override
-    public void buscarProducto(int productoId) {
+    public Producto buscarProductoPorId(int productoId) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -46,5 +46,9 @@ public class ProductoService implements IProductoService {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-  
+   
+   
+    
+    
+    
 }
