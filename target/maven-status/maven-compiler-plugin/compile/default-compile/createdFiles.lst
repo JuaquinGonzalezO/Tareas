@@ -1,7 +1,7 @@
 org\joaquingonzalez\webapp\service\ProductoService.class
 Main.class
 org\joaquingonzalez\webapp\model\Producto.class
-org\joaquingonzalez\webapp\servlet\Producto.class
 org\joaquingonzalez\webapp\servlet\ProductoServlet.class
 org\joaquingonzalez\webapp\util\JpaUtil.class
 org\joaquingonzalez\webapp\service\IProductoService.class
+.netbeans_automatic_build

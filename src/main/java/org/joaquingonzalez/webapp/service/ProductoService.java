@@ -10,27 +10,23 @@ import org.joaquingonzalez.webapp.model.Producto;
 import org.joaquingonzalez.webapp.util.JpaUtil;
 
 
-public class ProductoService implements IProductoService{
+public class ProductoService implements IProductoService {
     
     private EntityManager em;
     
     public ProductoService(){
-     this.em = JpaUtil.getEntityManager();
+        this.em = JpaUtil.getEntityManager();
     }
-    
 
     @Override
     public List<Producto> listarProductos() {
-       return em.createQuery("SELECT P FROM Producto p", Producto.class).getResultList();
-       
-
+        return em .createQuery("SELECT p FROM Producto p", Producto.class).getResultList();
     }
 
     @Override
     public void agregarProducto() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
     @Override
     public void eliminarProducto(int productoId) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
